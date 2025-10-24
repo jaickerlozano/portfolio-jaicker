@@ -1,0 +1,95 @@
+@forward 'animations';
+@forward 'typography';
+@use '../abstracts/variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  background-color: $color-bg;
+  color: $color-text;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: $color-primary;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 600;
+  &--primary {
+    background: $color-primary;
+    color: $color-bg;
+    &:hover { opacity: 0.8; }
+  }
+  &--outline {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    &:hover {
+      background: $color-primary;
+      color: $color-bg;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-main;
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: $transition;
+
+  &--primary {
+    background: $color-primary;
+    color: $color-bg;
+    &:hover { opacity: 0.8; }
+  }
+
+  &--outline {
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    &:hover {
+      background: $color-primary;
+      color: $color-bg;
+    }
+  }
+}

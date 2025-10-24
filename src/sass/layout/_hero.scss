@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *;
+@use "sass:color";
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: $color-text;
+
+  .hero__content {
+    z-index: 2;
+    text-align: center;
+    margin-top: 5rem;
+
+    .hero__title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+
+      span {
+        color: $color-primary;
+      }
+    }
+
+    .hero__subtitle {
+      margin: 1rem 0 2rem;
+      font-size: 1.1rem;
+      color: color.adjust($color-text, $lightness: 10%); // Nueva forma de usar las escalas en SASS
+    }
+
+    .hero__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(0, 173, 181, 0.15), transparent 70%),
+                radial-gradient(circle at 70% 70%, rgba(0, 173, 181, 0.1), transparent 70%),
+                linear-gradient(180deg, #121212 0%, #0c0c0c 100%);
+    animation: gradientMove 15s infinite alternate;
+    z-index: 1;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+}

@@ -1,9 +1,18 @@
+// Importa las imágenes correctamente
+import paginaEducativa from "../assets/img/pagina-educativa.jpg";
+import portfolio from "../assets/img/proyecto-portfolio.jpg";
+import juegoMemoria from "../assets/img/juego-de-parejas.jpg";
+import elearning from "../assets/img/e-learning-mobile.jpg";
+import textoAVoz from "../assets/img/textoavoz.jpg";
+import editorTexto from "../assets/img/editordetexto.jpg";
+
+// Exporta tu array de proyectos con los imports
 export const projects = [
   {
     title: "Página Educativa - Landing Page",
     description: "Primer proyecto creado con HTML, SASS y Vite, mostrando mis proyectos y habilidades.",
     technologies: ["HTML", "SASS", "Vite"],
-    image: "./src/assets/img/pagina-educativa.jpg",
+    image: paginaEducativa,
     github: "https://github.com/jaickerlozano/proyecto_elaboracion_pagina_html",
     demo: "https://jaickerlozano.github.io/proyecto_elaboracion_pagina_html/",
   },
@@ -11,7 +20,7 @@ export const projects = [
     title: "Portfolio - Landing Page",
     description: "Portfolio responsive creado con HTML, SASS y Vite, mostrando mis proyectos y habilidades.",
     technologies: ["HTML", "SASS", "Vite"],
-    image: "./src/assets/img/proyecto-portfolio.jpg",
+    image: portfolio,
     github: "https://github.com/jaickerlozano/proyecto03_responsive_portfolio",
     demo: "https://jaickerlozano.github.io/proyecto03_responsive_portfolio/",
   },
@@ -19,7 +28,7 @@ export const projects = [
     title: "Juego de Memoria",
     description: "Primer proyecto creado con Vanilla JS",
     technologies: ["JavaScript", "HTML", "SASS", "Vite"],
-    image: "./src/assets/img/juego-de-parejas.jpg",
+    image: juegoMemoria,
     github: "https://github.com/jaickerlozano/primer-proyecto-js-juego-de-memoria",
     demo: "https://jaickerlozano.github.io/primer-proyecto-js-juego-de-memoria/",
   },
@@ -27,7 +36,7 @@ export const projects = [
     title: "E-Learning Landing Page",
     description: "e-Learning es una landing page responsive desarrollada con HTML, SASS y Vite",
     technologies: ["HTML", "SASS", "Vite"],
-    image: "./src/assets/img/e-learning-mobile.jpg",
+    image: elearning,
     github: "https://github.com/jaickerlozano/Proyecto01_responsive_elearning",
     demo: "https://jaickerlozano.github.io/Proyecto01_responsive_elearning/",
   },
@@ -35,15 +44,15 @@ export const projects = [
     title: "Texto a Voz",
     description: "Aplicación en Python que convierte texto en voz, con interfaz simple y configurable.",
     technologies: ["Python"],
-    image: "./src/assets/img/textoavoz.jpg",
+    image: textoAVoz,
     github: "https://github.com/JaickerLozano/texto_a_voz",
     demo: "#",
   },
-    {
+  {
     title: "Editor de Texto",
     description: "Aplicación básica en Python para editar texto utilizando la librería tkinter",
     technologies: ["Python"],
-    image: "./src/assets/img/editordetexto.jpg",
+    image: editorTexto,
     github: "https://github.com/jaickerlozano/editor_de_texto",
     demo: "#",
   },

@@ -26,6 +26,7 @@
       display: flex;
       gap: 2rem;
       list-style: none;
+      transition: all 0.3s ease-in-out;
 
       .nav__link {
         color: $color-text;
@@ -56,32 +57,39 @@
 
     .nav__toggle {
       display: none;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       background: none;
       color: $color-text;
       border: none;
       cursor: pointer;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .nav__menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 70px;
-      right: 0;
-      background: rgba(0, 0, 0, 0.9);
-      padding: 1rem 2rem;
-      border-radius: 10px;
+      z-index: 1100;
     }
 
-    .nav__menu.active {
-      display: flex;
-    }
+    // ✅ MEDIA QUERY DENTRO DE .nav, no dentro de .header
+    @media (max-width: 768px) {
+      .nav__menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        opacity: 0;
+        transform: translateY(-10px);
+      }
 
-    .nav__toggle {
-      display: block;
+      .nav__menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav__toggle {
+        display: block;
+      }
     }
   }
 }
+

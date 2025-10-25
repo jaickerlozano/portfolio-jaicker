@@ -21,12 +21,14 @@ container.innerHTML = projects.map(proyecto => `
   </div>
 `).join('');
 
-const toggle = document.getElementById('nav-toggle');
-const menu = document.querySelector('.nav__menu');
+// --- Toggle menú mobile ---
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.querySelector(".nav__menu");
 
-toggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
 });
+
 
 // Footer year
 const yearSpan = document.getElementById("year");

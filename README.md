@@ -1,3 +1,5 @@
+![prueba](https://github.com/jaickerlozano/portfolio-jaicker/blob/main/banner%20portfolio%20personal.png)
+
 # 💻 Personal Portfolio
 
 A modern and responsive personal portfolio designed to showcase my projects, skills, and professional journey as a **Frontend Developer**.  

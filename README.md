@@ -39,7 +39,7 @@ The goal of this portfolio is not only to display my work but also to demonstrat
 ## 📸 Preview
 
 > _You can check the live version here:_  
-👉 [Live Demo](https://jaickerlozano.github.io/portfolio-personal/)
+👉 [Live Demo](https://jaickerlozano.github.io/portfolio-jaicker/)
 
 ---
 
@@ -74,7 +74,7 @@ I enjoy creating clean, interactive, and scalable web interfaces — always seek
 
 ## 🤝 Connect with Me
 
-- 💼 [LinkedIn](https://www.linkedin.com/in/jaickerlozano)
+- 💼 [LinkedIn](https://www.linkedin.com/in/jaicker-rafael-lozano-flores-970197264)
 - 🐙 [GitHub](https://github.com/jaickerlozano)
 - ✉️ Email: jlozano.dev@gmail.com
 

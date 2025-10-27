@@ -1,4 +1,4 @@
-![Banner Jaicker Lozano](./src/assets/images/banner-jaicker-lozano.png)
+![Banner Jaicker Lozano](./src/assets/img/banner-portfolio.png)
 
 # 💻 Personal Portfolio
 

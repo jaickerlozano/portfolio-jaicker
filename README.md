@@ -1,4 +1,4 @@
-![prueba](https://github.com/jaickerlozano/portfolio-jaicker/blob/main/banner%20portfolio%20personal.png)
+![Banner Jaicker Lozano](./src/assets/img/banner-portfolio.png)
 
 # 💻 Personal Portfolio
 

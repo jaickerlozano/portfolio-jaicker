@@ -5,9 +5,36 @@ import juegoMemoria from "../assets/img/juego-de-parejas.jpg";
 import elearning from "../assets/img/e-learning-mobile.jpg";
 import textoAVoz from "../assets/img/textoavoz.jpg";
 import editorTexto from "../assets/img/editordetexto.jpg";
+import editorTextoTS from "../assets/img/editor-ts.jpg";
+import sudokuJS from "../assets/img/sudoku-solver.jpg";
+import tresEnRayaImg from "../assets/img/tresenraya.jpg";
 
 // Exporta tu array de proyectos con los imports
 export const projects = [
+  {
+    title: "Editor de Código TypeScript",
+    description: "Editor de código ligero construido con TypeScript. Permite escritura de sintaxis y ejecución básica, demostrando el tipado fuerte y manejo del DOM moderno.",
+    technologies: ["TypeScript", "Vite", "Web Components"],
+    image: editorTextoTS,
+    github: "https://github.com/jaickerlozano/editor-ts", // <--- Pon aquí el link real de tu repo
+    demo: "https://jaickerlozano.github.io/editor-ts", 
+  },
+  {
+    title: "Sudoku Solver",
+    description: "Algoritmo de resolución de Sudokus implementado en JavaScript. Utiliza backtracking para encontrar la solución eficiente a tableros complejos.",
+    technologies: ["JavaScript", "Algoritmos", "Logic"],
+    image: sudokuJS,
+    github: "https://github.com/jaickerlozano/proyecto-js-sudoku-solver", // <--- Pon aquí el link real de tu repo
+    demo: "https://jaickerlozano.github.io/proyecto-js-sudoku-solver/", // <--- Si tienes deploy, ponlo aquí
+  },
+  {
+    title: "Juego Tres en Raya",
+    description: "Clásico juego de estrategia implementado con JavaScript puro y optimizado con Vite. Cuenta con una interfaz moderna y responsiva estilizada con Sass, asegurando un rendimiento fluido.",
+    technologies: ["JavaScript", "Vite", "Sass"],
+    image: tresEnRayaImg, // Asegúrate de importar tu imagen y asignar este nombre o poner la ruta entre comillas
+    github: "https://github.com/jaickerlozano/juego-tres-en-raya",
+    demo: "https://jaickerlozano.github.io/juego-tres-en-raya", // Enlace inferido (verifica que tu deploy esté activo)
+  },
   {
     title: "Página Educativa - Landing Page",
     description: "Primer proyecto creado con HTML, SASS y Vite, mostrando mis proyectos y habilidades.",

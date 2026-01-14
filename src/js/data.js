@@ -6,7 +6,7 @@ import elearning from "../assets/img/e-learning-mobile.jpg";
 import textoAVoz from "../assets/img/textoavoz.jpg";
 import editorTexto from "../assets/img/editordetexto.jpg";
 import editorTextoTS from "../assets/img/editor-ts.jpg";
-import sudokuJS from "../assets/img/sudoku-solver.jpg";
+import sudokuJS from "../assets/img/sudoku-reactjs.gif";
 import tresEnRayaImg from "../assets/img/tresenraya.jpg";
 
 // Exporta tu array de proyectos con los imports
@@ -20,12 +20,12 @@ export const projects = [
     demo: "https://jaickerlozano.github.io/editor-ts", 
   },
   {
-    title: "Sudoku Solver",
-    description: "Algoritmo de resolución de Sudokus implementado en JavaScript. Utiliza backtracking para encontrar la solución eficiente a tableros complejos.",
-    technologies: ["JavaScript", "Algoritmos", "Logic"],
+    title: "Sudoku Master | Solver con Algoritmo de Backtracking",
+    description: "Algoritmo de resolución de Sudokus implementado en ReactJS. Utiliza backtracking para encontrar la solución eficiente a tableros complejos.",
+    technologies: ["ReactJS", "JavaScript", "Tailwind", "Algoritmos", "Logic"],
     image: sudokuJS,
-    github: "https://github.com/jaickerlozano/proyecto-js-sudoku-solver", // <--- Pon aquí el link real de tu repo
-    demo: "https://jaickerlozano.github.io/proyecto-js-sudoku-solver/", // <--- Si tienes deploy, ponlo aquí
+    github: "https://github.com/jaickerlozano/sudoku-solver-reactjs", // <--- Pon aquí el link real de tu repo
+    demo: "https://jaickerlozano.github.io/sudoku-solver-reactjs/", // <--- Si tienes deploy, ponlo aquí
   },
   {
     title: "Juego Tres en Raya",

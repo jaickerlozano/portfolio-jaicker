@@ -8,6 +8,7 @@ import editorTexto from "../assets/img/editordetexto.jpg";
 import editorTextoTS from "../assets/img/editor-ts.jpg";
 import sudokuJS from "../assets/img/sudoku-reactjs.gif";
 import tresEnRayaImg from "../assets/img/tresenraya.jpg";
+import rickAndMorty from "../assets/img/rick-and-morty-img.jpg";
 
 // Exporta tu array de proyectos con los imports
 export const projects = [
@@ -18,6 +19,14 @@ export const projects = [
     image: editorTextoTS,
     github: "https://github.com/jaickerlozano/editor-ts", // <--- Pon aquí el link real de tu repo
     demo: "https://jaickerlozano.github.io/editor-ts", 
+  },
+  {
+    title: "Rick & Morty App: Buscador, Filtros y Persistencia de Datos",
+    description: "Desarrollo de una Single Page Application (SPA) moderna y escalable, diseñada para explorar el universo de Rick and Morty consumiendo su API REST pública. El objetivo principal fue crear una experiencia de usuario inmersiva con alto rendimiento y diseño responsivo.",
+    technologies: ["ReactJS", "Tailwind", "JavaScript (ES6+)", "Vite", "Web Components"],
+    image: rickAndMorty,
+    github: "https://github.com/jaickerlozano/rickandmorty-api-react", // <--- Pon aquí el link real de tu repo
+    demo: "https://rickandmorty-api-react-iota.vercel.app/", 
   },
   {
     title: "Sudoku Master | Solver con Algoritmo de Backtracking",

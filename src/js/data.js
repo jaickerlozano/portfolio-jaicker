@@ -9,6 +9,9 @@ import editorTextoTS from "../assets/img/editor-ts.jpg";
 import sudokuJS from "../assets/img/sudoku-reactjs.gif";
 import tresEnRayaImg from "../assets/img/tresenraya.jpg";
 import rickAndMorty from "../assets/img/rick-and-morty-img.jpg";
+import artGalleryImg from "../assets/img/art-gallery.gif";
+import spaBeautyImg from "../assets/img/beauty-spa-landing-page.jpg";
+import coworkingImg from "../assets/img/coworking-space-landing-page.jpg";
 
 // Exporta tu array de proyectos con los imports
 export const projects = [
@@ -53,6 +56,30 @@ export const projects = [
     demo: "https://jaickerlozano.github.io/proyecto_elaboracion_pagina_html/",
   },
   {
+    title: "Modern Art Gallery | Landing Page",
+    description: "Landing page responsive para una galería de arte moderna. Enfocada en la maquetación semántica, accesibilidad y uso avanzado de Grid y Flexbox para adaptar el diseño a cualquier dispositivo.",
+    technologies: ["HTML5", "CSS3", "Responsive Design"],
+    image: artGalleryImg, // <--- Recuerda importar esta imagen arriba
+    github: "https://github.com/jaickerlozano/proyecto02_modern_art_gallery",
+    demo: "https://jaickerlozano.github.io/proyecto02_modern_art_gallery/", 
+  },
+  {
+    title: "Spa & Beauty | Sitio Web Estético",
+    description: "Sitio web multipágina para un centro de estética. Destaca por un diseño visual limpio y relajante, implementando navegación fluida y estilos consistentes para mejorar la experiencia de usuario.",
+    technologies: ["HTML5", "Sass", "JavaScript"],
+    image: spaBeautyImg, 
+    github: "https://github.com/jaickerlozano/proyecto06_spa_and_beauty",
+    demo: "https://jaickerlozano.github.io/proyecto06_spa_and_beauty/", 
+  },
+  {
+    title: "Coworking Space | Maquetación UI",
+    description: "Interfaz moderna para un espacio de Coworking. El proyecto demuestra habilidades sólidas en la estructura de layouts complejos y adaptación 'Mobile First' para captar clientes potenciales.",
+    technologies: ["HTML5", "CSS3", "Maquetación UI"],
+    image: coworkingImg, 
+    github: "https://github.com/jaickerlozano/proyecto03_coworking_space",
+    demo: "https://jaickerlozano.github.io/proyecto03_coworking_space/", 
+  },
+  {
     title: "Portfolio - Landing Page",
     description: "Portfolio responsive creado con HTML, SASS y Vite, mostrando mis proyectos y habilidades.",
     technologies: ["HTML", "SASS", "Vite"],
@@ -60,36 +87,36 @@ export const projects = [
     github: "https://github.com/jaickerlozano/proyecto03_responsive_portfolio",
     demo: "https://jaickerlozano.github.io/proyecto03_responsive_portfolio/",
   },
-  {
-    title: "Juego de Memoria",
-    description: "Primer proyecto creado con Vanilla JS",
-    technologies: ["JavaScript", "HTML", "SASS", "Vite"],
-    image: juegoMemoria,
-    github: "https://github.com/jaickerlozano/primer-proyecto-js-juego-de-memoria",
-    demo: "https://jaickerlozano.github.io/primer-proyecto-js-juego-de-memoria/",
-  },
-  {
-    title: "E-Learning Landing Page",
-    description: "e-Learning es una landing page responsive desarrollada con HTML, SASS y Vite",
-    technologies: ["HTML", "SASS", "Vite"],
-    image: elearning,
-    github: "https://github.com/jaickerlozano/Proyecto01_responsive_elearning",
-    demo: "https://jaickerlozano.github.io/Proyecto01_responsive_elearning/",
-  },
-  {
-    title: "Texto a Voz",
-    description: "Aplicación en Python que convierte texto en voz, con interfaz simple y configurable.",
-    technologies: ["Python"],
-    image: textoAVoz,
-    github: "https://github.com/JaickerLozano/texto_a_voz",
-    demo: "#",
-  },
-  {
-    title: "Editor de Texto",
-    description: "Aplicación básica en Python para editar texto utilizando la librería tkinter",
-    technologies: ["Python"],
-    image: editorTexto,
-    github: "https://github.com/jaickerlozano/editor_de_texto",
-    demo: "#",
-  },
+  // {
+  //   title: "Juego de Memoria",
+  //   description: "Primer proyecto creado con Vanilla JS",
+  //   technologies: ["JavaScript", "HTML", "SASS", "Vite"],
+  //   image: juegoMemoria,
+  //   github: "https://github.com/jaickerlozano/primer-proyecto-js-juego-de-memoria",
+  //   demo: "https://jaickerlozano.github.io/primer-proyecto-js-juego-de-memoria/",
+  // },
+  // {
+  //   title: "E-Learning Landing Page",
+  //   description: "e-Learning es una landing page responsive desarrollada con HTML, SASS y Vite",
+  //   technologies: ["HTML", "SASS", "Vite"],
+  //   image: elearning,
+  //   github: "https://github.com/jaickerlozano/Proyecto01_responsive_elearning",
+  //   demo: "https://jaickerlozano.github.io/Proyecto01_responsive_elearning/",
+  // },
+  // {
+  //   title: "Texto a Voz",
+  //   description: "Aplicación en Python que convierte texto en voz, con interfaz simple y configurable.",
+  //   technologies: ["Python"],
+  //   image: textoAVoz,
+  //   github: "https://github.com/JaickerLozano/texto_a_voz",
+  //   demo: "#",
+  // },
+  // {
+  //   title: "Editor de Texto",
+  //   description: "Aplicación básica en Python para editar texto utilizando la librería tkinter",
+  //   technologies: ["Python"],
+  //   image: editorTexto,
+  //   github: "https://github.com/jaickerlozano/editor_de_texto",
+  //   demo: "#",
+  // },
 ];

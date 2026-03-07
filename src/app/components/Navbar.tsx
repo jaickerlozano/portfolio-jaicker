@@ -56,10 +56,10 @@ export function Navbar() {
           </ul>
           
           <div className="flex items-center gap-4 border-l border-white/10 pl-6">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
+            <a href="https://github.com/JaickerLozano" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <Github size={18} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors">
+            <a href="https://www.linkedin.com/in/jaicker-rafael-lozano-flores-970197264/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors">
               <Linkedin size={18} />
             </a>
           </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import profileImg from 'figma:asset/e894053f5ac983e800da6f256621d5ab16a6baed.png';
+import profileImg from '../../assets/img/foto-portfolio.jpg';
 import { Code2, Cog, Layout } from 'lucide-react';
 
 export function Story() {

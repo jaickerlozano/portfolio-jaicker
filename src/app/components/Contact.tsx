@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Mail, MapPin, Send } from 'lucide-react';
 
 export function Contact() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const response = await fetch("https://formspree.io/f/mblpddvd", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+  };
+
   return (
     <section id="contact" className="py-24 relative z-10 bg-slate-900/50 border-t border-white/5">
       <div className="container mx-auto px-6 md:px-12">
@@ -38,7 +70,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email</h4>
-                  <a href="mailto:hola@jaickerlozano.com" className="text-slate-400 hover:text-cyan-400 transition-colors">hola@jaickerlozano.com</a>
+                  <a href="mailto:jlozano.devcode@gmail.com" className="text-slate-400 hover:text-cyan-400 transition-colors">jlozano.devcode@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -51,35 +83,61 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/5 p-8 border border-white/10 rounded-2xl backdrop-blur-sm"
           >
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Nombre</label>
+                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="name">Nombre</label>
                 <input 
                   type="text" 
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Tu nombre" 
+                  required
                   className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all placeholder:text-slate-600"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Correo</label>
+                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="email">Correo</label>
                 <input 
                   type="email" 
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="tu@email.com" 
+                  required
                   className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all placeholder:text-slate-600"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">Mensaje</label>
+                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="message">Mensaje</label>
                 <textarea 
+                  id="message"
+                  name="message"
                   rows={4} 
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="¿En qué puedo ayudarte?" 
+                  required
                   className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all placeholder:text-slate-600 resize-none"
                 ></textarea>
               </div>
-              <button className="w-full py-4 bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 text-white font-medium rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-500/25 group">
-                Enviar Mensaje
-                <Send size={18} className="group-hover:translate-x-1 transition-transform" />
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                className="w-full py-4 bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 disabled:opacity-50 text-white font-medium rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-500/25 group"
+              >
+                {status === 'loading' ? 'Enviando...' : 'Enviar Mensaje'}
+                {status !== 'loading' && <Send size={18} className="group-hover:translate-x-1 transition-transform" />}
               </button>
+
+              {status === 'success' && (
+                <p className="text-green-400 text-center mt-4">¡Mensaje enviado correctamente! 📩</p>
+              )}
+              {status === 'error' && (
+                <p className="text-red-400 text-center mt-4">Hubo un error al enviar el mensaje. Inténtalo nuevamente.</p>
+              )}
             </form>
           </motion.div>
 

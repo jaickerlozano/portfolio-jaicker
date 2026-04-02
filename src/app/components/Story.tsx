@@ -22,8 +22,10 @@ export function Story() {
               <div className="absolute inset-2 bg-slate-900 rounded-full border border-white/10 z-10 overflow-hidden">
                 <img 
                   src={profileImg} 
-                  alt="Jaicker Lozano" 
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700 grayscale hover:grayscale-0 mix-blend-luminosity hover:mix-blend-normal"
+                  alt="Jaicker Lozano - Full Stack Developer" 
+                  className="w-full h-[130%] object-cover opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-700 grayscale hover:grayscale-0 mix-blend-luminosity hover:mix-blend-normal"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

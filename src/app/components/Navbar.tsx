@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, Github, Linkedin, Globe } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { Menu, X, Github, Linkedin, Globe, Sun, Moon } from 'lucide-react';
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
+  const { theme, setTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -24,6 +26,10 @@ export function Navbar() {
     } catch {
       // localStorage unavailable, fallback to memory only
     }
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   const navLinks = [
@@ -69,8 +75,16 @@ export function Navbar() {
           
           <div className="flex items-center gap-4 border-l border-white/10 pl-6">
             <button 
+              onClick={toggleTheme}
+              className="text-slate-400 hover:text-white dark:text-slate-400 dark:hover:text-white transition-colors"
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+            <button 
               onClick={toggleLanguage}
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 hover:text-white dark:text-slate-400 dark:hover:text-white transition-colors"
               title={t('language.switch')}
               aria-label={t('language.switch')}
             >

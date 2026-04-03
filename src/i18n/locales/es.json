@@ -39,7 +39,8 @@
     "titleHighlight": "Destacados",
     "description": "Una selección de proyectos que demuestran mis habilidades y pasión por el desarrollo web.",
     "viewProject": "Ver Proyecto",
-    "featured": "Destacado"
+    "featured": "Destacado",
+    "errorLoading": "Error al cargar proyectos de GitHub. Mostrando proyectos destacados."
   },
   "contact": {
     "title": "¿Listo para",
@@ -65,6 +66,10 @@
     "copyright": "Jaicker Lozano. Desarrollador Frontend | Creando experiencias digitales modernas"
   },
   "language": {
-    "switch": "Cambiar a Inglés"
+    "switch": "Cambiar a Inglés",
+    "theme": {
+      "light": "Cambiar a modo claro",
+      "dark": "Cambiar a modo oscuro"
+    }
   }
 }

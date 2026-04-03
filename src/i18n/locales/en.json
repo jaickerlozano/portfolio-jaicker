@@ -39,7 +39,8 @@
     "titleHighlight": "Projects",
     "description": "A selection of projects that demonstrate my skills and passion for web development.",
     "viewProject": "View Project",
-    "featured": "Featured"
+    "featured": "Featured",
+    "errorLoading": "Error loading GitHub projects. Showing featured projects."
   },
   "contact": {
     "title": "Ready to",
@@ -65,6 +66,10 @@
     "copyright": "Jaicker Lozano. Frontend Developer | Creating modern digital experiences"
   },
   "language": {
-    "switch": "Switch to Spanish"
+    "switch": "Switch to Spanish",
+    "theme": {
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode"
+    }
   }
 }

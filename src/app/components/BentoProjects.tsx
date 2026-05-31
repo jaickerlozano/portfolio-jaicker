@@ -13,32 +13,50 @@ export interface Project {
   demo?: string;
 }
 
+// TODO: Replace these placeholder images with actual screenshots of the new projects
+// Place images in src/assets/img/ and update the import paths
+import bookingManagerImg from '../../assets/img/booking-manager.png';
+import inventorySystemImg from '../../assets/img/inventory-sistem.png';
 import editorTextoTS from '../../assets/img/editor-ts.jpg';
 import rickAndMorty from '../../assets/img/rick-and-morty-img.jpg';
 import sudokuJS from '../../assets/img/sudoku-reactjs.gif';
-import tresEnRayaImg from '../../assets/img/tresenraya.jpg';
-import paginaEducativa from '../../assets/img/pagina-educativa.jpg';
-import artGalleryImg from '../../assets/img/art-gallery.gif';
-import spaBeautyImg from '../../assets/img/beauty-spa-landing-page.jpg';
-import coworkingImg from '../../assets/img/coworking-space-landing-page.jpg';
-import portfolio from '../../assets/img/proyecto-portfolio.jpg';
 
 
 const PROJECTS: Project[] = [
+  {
+    title: "Booking Manager | Space Reservation System",
+    description: "Full-featured reservation system for residential complexes. Role-based access (Admin/Resident), real-time AJAX search, email notifications, Cloudinary storage, and deployed on Render with PostgreSQL.",
+    tags: ["Django 5.2", "Python", "Tailwind CSS", "PostgreSQL", "Cloudinary", "Render"],
+    image: bookingManagerImg,
+    span: 'col-span-1 md:col-span-2 lg:col-span-2 row-span-2',
+    featured: true,
+    github: "https://github.com/jaickerlozano/booking_manager_django",
+    demo: "https://booking-manager-django.onrender.com/",
+  },
+  {
+    title: "Inventory System | Full-Stack Management",
+    description: "Full-stack inventory management with Django REST Framework + React/TypeScript. Real-time stock tracking, 3-level alert system, row-level concurrency protection (select_for_update), and Swagger API docs.",
+    tags: ["Django REST", "React 19", "TypeScript", "PostgreSQL", "Tailwind v4", "Vite"],
+    image: inventorySystemImg,
+    span: 'col-span-1',
+    featured: true,
+    github: "https://github.com/jaickerlozano/inventory_sistem_fullstack",
+    demo: "https://inventory-sistem-full-stack.onrender.com",
+  },
   {
     title: "Editor de Código TypeScript",
     description: "Editor de código ligero construido con TypeScript. Permite escritura de sintaxis y ejecución básica, demostrando el tipado fuerte y manejo del DOM moderno.",
     tags: ["TypeScript", "Vite", "Web Components"],
     image: editorTextoTS,
-    span: 'col-span-1 md:col-span-2 lg:col-span-2 row-span-2',
-    featured: true,
+    span: 'col-span-1',
+    featured: false,
     github: "https://github.com/jaickerlozano/editor-ts",
     demo: "https://jaickerlozano.github.io/editor-ts",
   },
   {
-    title: "Rick & Morty App: Buscador, Filtros y Persistencia de Datos",
-    description: "Desarrollo de una Single Page Application (SPA) moderna y escalable, diseñada para explorar el universo de Rick and Morty consumiendo su API REST pública. El objetivo principal fue crear una experiencia de usuario inmersiva con alto rendimiento y diseño responsivo.",
-    tags: ["ReactJS", "Tailwind", "JavaScript (ES6+)", "Vite", "Web Components"],
+    title: "Rick & Morty Multiverse Explorer",
+    description: "Single Page Application (SPA) moderna consumiendo API REST pública. Experiencia inmersiva con alto rendimiento, diseño responsivo con Glassmorphism y persistencia de datos.",
+    tags: ["ReactJS", "Tailwind", "JavaScript (ES6+)", "Vite"],
     image: rickAndMorty,
     span: 'col-span-1',
     featured: false,
@@ -46,74 +64,14 @@ const PROJECTS: Project[] = [
     demo: "https://rickandmorty-api-react-iota.vercel.app/",
   },
   {
-    title: "Sudoku Master | Solver con Algoritmo de Backtracking",
-    description: "Algoritmo de resolución de Sudokus implementado en ReactJS. Utiliza backtracking para encontrar la solución eficiente a tableros complejos.",
+    title: "Sudoku Master | Backtracking Algorithm",
+    description: "Algoritmo de resolución de Sudokus implementado en ReactJS. Utiliza backtracking para encontrar soluciones eficientes a tableros complejos en tiempo real.",
     tags: ["ReactJS", "JavaScript", "Tailwind", "Algoritmos", "Logic"],
     image: sudokuJS,
-    span: 'col-span-1',
+    span: 'col-span-1 lg:col-span-2',
     featured: false,
     github: "https://github.com/jaickerlozano/sudoku-solver-reactjs",
     demo: "https://jaickerlozano.github.io/sudoku-solver-reactjs/",
-  },
-  {
-    title: "Juego Tres en Raya",
-    description: "Clásico juego de estrategia implementado con JavaScript puro y optimizado con Vite. Cuenta con una interfaz moderna y responsiva estilizada con Sass, asegurando un rendimiento fluido.",
-    tags: ["JavaScript", "Vite", "Sass"],
-    image: tresEnRayaImg,
-    span: 'col-span-1 lg:col-span-2',
-    featured: false,
-    github: "https://github.com/jaickerlozano/juego-tres-en-raya",
-    demo: "https://jaickerlozano.github.io/juego-tres-en-raya",
-  },
-  {
-    title: "Página Educativa - Landing Page",
-    description: "Primer proyecto creado con HTML, SASS y Vite, mostrando mis proyectos y habilidades.",
-    tags: ["HTML", "SASS", "Vite"],
-    image: paginaEducativa,
-    span: 'col-span-1',
-    featured: false,
-    github: "https://github.com/jaickerlozano/proyecto_elaboracion_pagina_html",
-    demo: "https://jaickerlozano.github.io/proyecto_elaboracion_pagina_html/",
-  },
-  {
-    title: "Modern Art Gallery | Landing Page",
-    description: "Landing page responsive para una galería de arte moderna. Enfocada en la maquetación semántica, accesibilidad y uso avanzado de Grid y Flexbox para adaptar el diseño a cualquier dispositivo.",
-    tags: ["HTML5", "CSS3", "Responsive Design"],
-    image: artGalleryImg,
-    span: 'col-span-1',
-    featured: false,
-    github: "https://github.com/jaickerlozano/proyecto02_modern_art_gallery",
-    demo: "https://jaickerlozano.github.io/proyecto02_modern_art_gallery/",
-  },
-  {
-    title: "Spa & Beauty | Sitio Web Estético",
-    description: "Sitio web multipágina para un centro de estética. Destaca por un diseño visual limpio y relajante, implementando navegación fluida y estilos consistentes para mejorar la experiencia de usuario.",
-    tags: ["HTML5", "Sass", "JavaScript"],
-    image: spaBeautyImg,
-    span: 'col-span-1 md:col-span-2 lg:col-span-2',
-    featured: false,
-    github: "https://github.com/jaickerlozano/proyecto06_spa_and_beauty",
-    demo: "https://jaickerlozano.github.io/proyecto06_spa_and_beauty/",
-  },
-  {
-    title: "Coworking Space | Maquetación UI",
-    description: "Interfaz moderna para un espacio de Coworking. El proyecto demuestra habilidades sólidas en la estructura de layouts complejos y adaptación 'Mobile First' para captar clientes potenciales.",
-    tags: ["HTML5", "CSS3", "Maquetación UI"],
-    image: coworkingImg,
-    span: 'col-span-1',
-    featured: false,
-    github: "https://github.com/jaickerlozano/proyecto03_coworking_space",
-    demo: "https://jaickerlozano.github.io/proyecto03_coworking_space/",
-  },
-  {
-    title: "Portfolio - Landing Page",
-    description: "Portfolio responsive creado con HTML, SASS y Vite, mostrando mis proyectos y habilidades.",
-    tags: ["HTML", "SASS", "Vite"],
-    image: portfolio,
-    span: 'col-span-1 md:col-span-2 lg:col-span-3',
-    featured: false,
-    github: "https://github.com/jaickerlozano/proyecto03_responsive_portfolio",
-    demo: "https://jaickerlozano.github.io/proyecto03_responsive_portfolio/",
   },
 ];
 
@@ -126,7 +84,7 @@ export function BentoProjects() {
             Proyectos <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Destacados</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl">
-            Una selección de los proyectos que he desarrollado, enfocados en performance, arquitectura y experiencia de usuario.
+            Una selección de proyectos full-stack y frontend enfocados en arquitectura limpia, rendimiento y experiencia de usuario.
           </p>
         </div>
 
@@ -172,12 +130,16 @@ export function BentoProjects() {
                   </p>
 
                   <div className="flex items-center gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                    <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition-colors">
-                      <Github size={16} /> GitHub
-                    </a>
-                    <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-indigo-400 transition-colors">
-                      <ExternalLink size={16} /> Live Demo
-                    </a>
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition-colors">
+                        <Github size={16} /> GitHub
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-indigo-400 transition-colors">
+                        <ExternalLink size={16} /> Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

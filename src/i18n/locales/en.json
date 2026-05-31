@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I'm a full stack developer in training with a passion for creating modern and efficient web experiences. With a background in Industrial Process Engineering, I combine my analytical thinking with technical skills to build scalable web solutions.",
+    "description": "I'm a Full Stack Developer building end-to-end applications with Python/Django and React/TypeScript. With a background in Industrial Process Engineering, I combine analytical thinking with technical skills to build scalable and efficient web solutions.",
     "engineer": "Process Engineer",
     "developer": "Full Stack Developer",
     "creator": "Experience Creator"
@@ -62,7 +62,7 @@
     }
   },
   "footer": {
-    "copyright": "Jaicker Lozano. Frontend Developer | Creating modern digital experiences"
+    "copyright": "Jaicker Lozano. Full Stack Developer | Django + React + AI-Driven"
   },
   "language": {
     "switch": "Switch to Spanish"

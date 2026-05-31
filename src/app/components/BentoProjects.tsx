@@ -40,8 +40,8 @@ const PROJECTS: Project[] = [
     image: inventorySystemImg,
     span: 'col-span-1',
     featured: true,
-    github: "https://github.com/jaickerlozano/inventory_sistem_fullstack",
-    demo: "https://inventory-sistem-full-stack.onrender.com",
+    github: "https://github.com/jaickerlozano/inventory_sistem_full_stack",
+    demo: "https://inventory-sistem-frontend.onrender.com/",
   },
   {
     title: "Editor de Código TypeScript",

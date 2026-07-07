@@ -3,16 +3,25 @@ import { motion } from 'motion/react';
 import { Terminal as TerminalIcon } from 'lucide-react';
 
 const SKILLS = [
+  // Backend
+  { name: 'Python', category: 'Backend', color: 'text-blue-500' },
+  { name: 'Django', category: 'Backend', color: 'text-green-500' },
+  { name: 'Django REST Framework', category: 'Backend/API', color: 'text-red-500' },
+  // Frontend
   { name: 'React', category: 'Frontend', color: 'text-cyan-400' },
   { name: 'TypeScript', category: 'Language', color: 'text-blue-400' },
   { name: 'JavaScript', category: 'Language', color: 'text-yellow-400' },
   { name: 'Tailwind CSS', category: 'Styling', color: 'text-teal-400' },
-  { name: 'HTML5/CSS3/SASS', category: 'Frontend', color: 'text-orange-400' },
+  { name: 'HTML5/CSS3', category: 'Frontend', color: 'text-orange-400' },
+  // Database
+  { name: 'PostgreSQL', category: 'Database', color: 'text-blue-600' },
+  // Tools & DevOps
   { name: 'Git & GitHub', category: 'Tools', color: 'text-red-400' },
+  { name: 'Docker', category: 'DevOps', color: 'text-blue-400' },
   { name: 'Vite', category: 'Tools', color: 'text-purple-400' },
-  { name: 'Figma', category: 'Design', color: 'text-pink-400' },
-  { name: 'Python', category: 'Backend', color: 'text-blue-500' },
-  { name: 'MySQL', category: 'Database', color: 'text-cyan-600' },
+  { name: 'Cloudinary', category: 'Services', color: 'text-yellow-400' },
+  // AI
+  { name: 'AI Agents', category: 'AI/Workflow', color: 'text-pink-400' },
 ];
 
 export function TechTerminal() {

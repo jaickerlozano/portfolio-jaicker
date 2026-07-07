@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import { Mail, MapPin, Send } from 'lucide-react';
 
 export function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
@@ -48,10 +50,10 @@ export function Contact() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              ¿Listo para <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">colaborar?</span>
+              {t('contact.title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">{t('contact.titleHighlight')}</span>
             </h2>
             <p className="text-slate-400 text-lg mb-10">
-              Actualmente estoy abierto a nuevas oportunidades. Ya sea que tengas una pregunta, una propuesta de proyecto, o solo quieras decir hola, ¡escríbeme!
+              {t('contact.description')}
             </p>
 
             <div className="space-y-6">
@@ -60,8 +62,8 @@ export function Contact() {
                   <MapPin className="text-cyan-400" size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1">Ubicación</h4>
-                  <p className="text-slate-400">Santiago, Chile</p>
+                  <h4 className="text-white font-medium mb-1">{t('contact.location')}</h4>
+                  <p className="text-slate-400">{t('contact.locationValue')}</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -69,7 +71,7 @@ export function Contact() {
                   <Mail className="text-indigo-400" size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1">Email</h4>
+                  <h4 className="text-white font-medium mb-1">{t('contact.email')}</h4>
                   <a href="mailto:jlozano.devcode@gmail.com" className="text-slate-400 hover:text-cyan-400 transition-colors">jlozano.devcode@gmail.com</a>
                 </div>
               </div>
@@ -85,40 +87,40 @@ export function Contact() {
           >
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="name">Nombre</label>
+                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="name">{t('contact.form.name')}</label>
                 <input 
                   type="text" 
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Tu nombre" 
+                  placeholder={t('contact.form.namePlaceholder')} 
                   required
                   className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all placeholder:text-slate-600"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="email">Correo</label>
+                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="email">{t('contact.form.email')}</label>
                 <input 
                   type="email" 
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="tu@email.com" 
+                  placeholder={t('contact.form.emailPlaceholder')} 
                   required
                   className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all placeholder:text-slate-600"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="message">Mensaje</label>
+                <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="message">{t('contact.form.message')}</label>
                 <textarea 
                   id="message"
                   name="message"
                   rows={4} 
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="¿En qué puedo ayudarte?" 
+                  placeholder={t('contact.form.messagePlaceholder')} 
                   required
                   className="w-full bg-slate-950 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all placeholder:text-slate-600 resize-none"
                 ></textarea>
@@ -128,15 +130,15 @@ export function Contact() {
                 disabled={status === 'loading'}
                 className="w-full py-4 bg-gradient-to-r from-indigo-500 to-cyan-500 hover:from-indigo-600 hover:to-cyan-600 disabled:opacity-50 text-white font-medium rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg shadow-indigo-500/25 group"
               >
-                {status === 'loading' ? 'Enviando...' : 'Enviar Mensaje'}
+                {status === 'loading' ? t('contact.form.sending') : t('contact.form.submit')}
                 {status !== 'loading' && <Send size={18} className="group-hover:translate-x-1 transition-transform" />}
               </button>
 
               {status === 'success' && (
-                <p className="text-green-400 text-center mt-4">¡Mensaje enviado correctamente! 📩</p>
+                <p className="text-green-400 text-center mt-4">{t('contact.form.success')}</p>
               )}
               {status === 'error' && (
-                <p className="text-red-400 text-center mt-4">Hubo un error al enviar el mensaje. Inténtalo nuevamente.</p>
+                <p className="text-red-400 text-center mt-4">{t('contact.form.error')}</p>
               )}
             </form>
           </motion.div>

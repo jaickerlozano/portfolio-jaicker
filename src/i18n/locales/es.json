@@ -1,0 +1,70 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "available": "Disponible para nuevas oportunidades",
+    "title": "Construyendo",
+    "titleHighlight": "experiencias web",
+    "titleEnd": "de alto impacto.",
+    "description": "Soy Jaicker Lozano, Desarrollador Full Stack. Apasionado por crear interfaces modernas, eficientes y escalables.",
+    "viewProjects": "Ver Proyectos",
+    "contactMe": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "description": "Soy un desarrollador Full Stack con experiencia en aplicaciones end-to-end usando Python/Django y React/TypeScript. Con formación en Ingeniería de Procesos Industriales, combino pensamiento analítico con habilidades técnicas para construir soluciones web escalables y eficientes.",
+    "engineer": "Ingeniero de Procesos",
+    "developer": "Desarrollador Full Stack",
+    "creator": "Creador de Experiencias"
+  },
+  "skills": {
+    "title": "Stack",
+    "titleHighlight": "Tecnológico",
+    "description": "Tecnologías y herramientas que manejo día a día.",
+    "terminal": {
+      "install": "npm install --save jaicker-lozano-skills",
+      "installing": "installing dependencies...",
+      "fetch": "fetch > [====================] 100%",
+      "success": "Success! Initializing tech stack environment.",
+      "run": "> run view-stack"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "titleHighlight": "Destacados",
+    "description": "Una selección de proyectos que demuestran mis habilidades y pasión por el desarrollo web.",
+    "viewProject": "Ver Proyecto",
+    "featured": "Destacado"
+  },
+  "contact": {
+    "title": "¿Listo para",
+    "titleHighlight": "colaborar?",
+    "description": "Actualmente estoy abierto a nuevas oportunidades. Ya sea que tengas una pregunta, una propuesta de proyecto, o solo quieras decir hola, ¡escríbeme!",
+    "location": "Ubicación",
+    "locationValue": "Santiago, Chile",
+    "email": "Email",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿En qué puedo ayudarte?",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado correctamente! 📩",
+      "error": "Hubo un error al enviar el mensaje. Inténtalo nuevamente."
+    }
+  },
+  "footer": {
+    "copyright": "Jaicker Lozano. Full Stack Developer | Django + React + AI-Driven"
+  },
+  "language": {
+    "switch": "Cambiar a Inglés"
+  }
+}

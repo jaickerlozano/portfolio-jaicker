@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Story } from './components/Story';
@@ -7,6 +8,8 @@ import { BentoProjects } from './components/BentoProjects';
 import { Contact } from './components/Contact';
 
 export default function App() {
+  const { t } = useTranslation();
+  
   return (
     <div className="min-h-screen bg-[#060a12] text-slate-200 selection:bg-indigo-500/30 selection:text-white">
       {/* Global Background Noise / Gradient */}
@@ -39,7 +42,7 @@ export default function App() {
           </a>
         </div>
         <p className="text-slate-500 text-sm">
-          © {new Date().getFullYear()} Jaicker Lozano. Desarrollador Frontend | Creando experiencias digitales modernas ⚡
+          © {new Date().getFullYear()} {t('footer.copyright')} ⚡
         </p>
       </footer>
     </div>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { Menu, X, Github, Linkedin, Globe } from 'lucide-react';
 
 export function Navbar() {
+  const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -14,12 +16,22 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'es' ? 'en' : 'es';
+    i18n.changeLanguage(newLang);
+    try {
+      localStorage.setItem('language', newLang);
+    } catch {
+      // localStorage unavailable, fallback to memory only
+    }
+  };
+
   const navLinks = [
-    { name: 'Inicio', href: '#home' },
-    { name: 'Sobre mí', href: '#about' },
-    { name: 'Proyectos', href: '#projects' },
-    { name: 'Habilidades', href: '#skills' },
-    { name: 'Contacto', href: '#contact' },
+    { name: t('nav.home'), href: '#home' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.skills'), href: '#skills' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
   return (
@@ -56,6 +68,14 @@ export function Navbar() {
           </ul>
           
           <div className="flex items-center gap-4 border-l border-white/10 pl-6">
+            <button 
+              onClick={toggleLanguage}
+              className="text-slate-400 hover:text-white transition-colors"
+              title={t('language.switch')}
+              aria-label={t('language.switch')}
+            >
+              <Globe size={18} />
+            </button>
             <a href="https://github.com/JaickerLozano" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <Github size={18} />
             </a>

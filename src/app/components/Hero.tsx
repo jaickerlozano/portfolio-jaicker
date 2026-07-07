@@ -54,6 +54,7 @@ export function Hero() {
           >
             <a 
               href="#projects"
+              aria-label="View my projects"
               className="px-8 py-4 bg-white text-slate-950 font-medium rounded-full hover:bg-slate-200 transition-colors flex items-center gap-2 group"
             >
               {t('hero.viewProjects')}
@@ -61,6 +62,7 @@ export function Hero() {
             </a>
             <a 
               href="#contact"
+              aria-label="Go to contact section"
               className="px-8 py-4 bg-white/5 text-white font-medium rounded-full border border-white/10 hover:bg-white/10 transition-colors"
             >
               {t('hero.contactMe')}

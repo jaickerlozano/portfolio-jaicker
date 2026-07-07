@@ -18,8 +18,8 @@ export interface Project {
 import bookingManagerImg from '../../assets/img/booking-manager.png';
 import inventorySystemImg from '../../assets/img/inventory-sistem.png';
 import editorTextoTS from '../../assets/img/editor-ts.jpg';
-import rickAndMorty from '../../assets/img/rick-and-morty-img.jpg';
-import sudokuJS from '../../assets/img/sudoku-reactjs.gif';
+import rickAndMorty from '../../assets/img/rick-and-morty-img.webp';
+import sudokuJS from '../../assets/img/sudoku-reactjs.mp4';
 
 
 const PROJECTS: Project[] = [
@@ -75,6 +75,15 @@ const PROJECTS: Project[] = [
   },
 ];
 
+function isVideoSrc(src: string): boolean {
+  return src.endsWith('.mp4');
+}
+
+function projectLabel(name: string, suffix: string): string {
+  const shortName = name.split('|')[0].trim();
+  return `${suffix} ${shortName}`;
+}
+
 export function BentoProjects() {
   return (
     <section id="projects" className="py-24 relative z-10">
@@ -98,15 +107,28 @@ export function BentoProjects() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className={`group relative rounded-2xl overflow-hidden bg-slate-900 border border-white/10 flex flex-col ${project.span}`}
             >
-              {/* Image Background */}
+              {/* Image / Video Background */}
               <div className="absolute inset-0 w-full h-full z-0">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40 group-hover:opacity-60"
-                  loading="lazy"
-                  decoding="async"
-                />
+                {isVideoSrc(project.image) ? (
+                  <video
+                    src={project.image}
+                    aria-label={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40 group-hover:opacity-60"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                  />
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40 group-hover:opacity-60"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
               </div>
 
@@ -131,12 +153,12 @@ export function BentoProjects() {
 
                   <div className="flex items-center gap-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                     {project.github && (
-                      <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition-colors">
+                      <a href={project.github} target="_blank" rel="noreferrer" aria-label={projectLabel(project.title, 'View source code on GitHub for')} className="flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition-colors">
                         <Github size={16} /> GitHub
                       </a>
                     )}
                     {project.demo && (
-                      <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-indigo-400 transition-colors">
+                      <a href={project.demo} target="_blank" rel="noreferrer" aria-label={projectLabel(project.title, 'Visit live demo of')} className="flex items-center gap-2 text-sm font-medium text-white hover:text-indigo-400 transition-colors">
                         <ExternalLink size={16} /> Live Demo
                       </a>
                     )}

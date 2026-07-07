@@ -4,6 +4,7 @@
   --font-size: 16px;
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
+  --text-primary: oklch(0.145 0 0);
   --card: #ffffff;
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -39,11 +40,30 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Portfolio-specific surface tokens */
+  --surface: #ffffff;
+  --surface-foreground: oklch(0.145 0 0);
+  --surface-muted: #f1f5f9;
+  --glass: rgba(0, 0, 0, 0.04);
+  --glass-hover: rgba(0, 0, 0, 0.08);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --hero-glow-1: rgba(99, 102, 241, 0.2);
+  --hero-glow-2: rgba(6, 182, 212, 0.2);
+  --gradient-from: rgba(79, 70, 229, 0.08);
+  --gradient-via: #f8fafc;
+  --gradient-to: #f8fafc;
+  --terminal-bg: #f1f5f9;
+  --terminal-header: rgba(0, 0, 0, 0.04);
+  --terminal-text: #334155;
+  --terminal-muted: #64748b;
+  --terminal-cursor: #334155;
 }
 
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
+  --text-primary: oklch(0.985 0 0);
   --card: oklch(0.145 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
@@ -76,11 +96,30 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+
+  /* Portfolio-specific surface tokens */
+  --surface: oklch(0.21 0 0);
+  --surface-foreground: oklch(0.985 0 0);
+  --surface-muted: oklch(0.145 0 0);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-hover: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --hero-glow-1: rgba(79, 70, 229, 0.2);
+  --hero-glow-2: rgba(8, 145, 178, 0.2);
+  --gradient-from: rgba(49, 46, 129, 0.1);
+  --gradient-via: #060a12;
+  --gradient-to: #060a12;
+  --terminal-bg: #0d1117;
+  --terminal-header: rgba(255, 255, 255, 0.05);
+  --terminal-text: #cbd5e1;
+  --terminal-muted: #64748b;
+  --terminal-cursor: #cbd5e1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-text-primary: var(--text-primary);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -117,6 +156,14 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Portfolio surface tokens */
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-surface-muted: var(--surface-muted);
+  --color-glass: var(--glass);
+  --color-glass-hover: var(--glass-hover);
+  --color-glass-border: var(--glass-border);
 }
 
 @layer base {
@@ -126,6 +173,10 @@
 
   body {
     @apply bg-background text-foreground;
+    color: var(--text-primary);
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   /**

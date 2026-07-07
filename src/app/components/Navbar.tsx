@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTranslation } from 'react-i18next';
-import { Menu, X, Github, Linkedin, Globe } from 'lucide-react';
+import { Menu, X, Globe, Sun, Moon } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from '../../components/icons';
+import { useTheme } from '../../hooks/useTheme';
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
+  const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -40,54 +43,83 @@ export function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/5 py-4' 
+        scrolled
+          ? 'bg-background/80 backdrop-blur-md border-b border-[var(--glass-border)] py-4'
           : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#home" className="text-xl font-bold tracking-tighter text-white flex items-center gap-2">
+        <a
+          href="#home"
+          className="text-xl font-bold tracking-tighter text-foreground flex items-center gap-2"
+        >
           <span className="text-indigo-500">JL</span>
           <span className="hidden sm:inline">Jaicker Lozano</span>
         </a>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-6 text-sm font-medium text-slate-300">
-            {navLinks.map((link) => (
+          <ul className="flex items-center gap-6 text-sm font-medium text-muted-foreground">
+            {navLinks.map(link => (
               <li key={link.name}>
-                <a 
-                  href={link.href} 
-                  className="hover:text-cyan-400 transition-colors duration-200 relative group"
+                <a
+                  href={link.href}
+                  className="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors duration-200 relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-cyan-500 dark:bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </li>
             ))}
           </ul>
-          
-          <div className="flex items-center gap-4 border-l border-white/10 pl-6">
-            <button 
+
+          <div className="flex items-center gap-4 border-l border-[var(--glass-border)] pl-6">
+            <button
               onClick={toggleLanguage}
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
               title={t('language.switch')}
               aria-label={t('language.switch')}
             >
               <Globe size={18} />
             </button>
-            <a href="https://github.com/JaickerLozano" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
-              <Github size={18} />
+            <button
+              onClick={toggleTheme}
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              title={
+                theme === 'dark'
+                  ? t('theme.switchToLight', 'Switch to light mode')
+                  : t('theme.switchToDark', 'Switch to dark mode')
+              }
+              aria-label={
+                theme === 'dark'
+                  ? t('theme.switchToLight', 'Switch to light mode')
+                  : t('theme.switchToDark', 'Switch to dark mode')
+              }
+            >
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+            <a
+              href="https://github.com/JaickerLozano"
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <GithubIcon size={18} />
             </a>
-            <a href="https://www.linkedin.com/in/jaicker-rafael-lozano-flores-970197264/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors">
-              <Linkedin size={18} />
+            <a
+              href="https://www.linkedin.com/in/jaicker-rafael-lozano-flores-970197264/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted-foreground hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors"
+            >
+              <LinkedinIcon size={18} />
             </a>
           </div>
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className="md:hidden text-slate-300 hover:text-white"
+        <button
+          className="md:hidden text-muted-foreground hover:text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >
@@ -102,15 +134,15 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-slate-900 border-b border-white/5 overflow-hidden"
+            className="md:hidden bg-surface border-b border-[var(--glass-border)] overflow-hidden"
           >
             <ul className="flex flex-col px-6 py-4 gap-4">
-              {navLinks.map((link) => (
+              {navLinks.map(link => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
+                  <a
+                    href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-slate-300 hover:text-cyan-400 py-2"
+                    className="block text-muted-foreground hover:text-cyan-500 dark:hover:text-cyan-400 py-2"
                   >
                     {link.name}
                   </a>

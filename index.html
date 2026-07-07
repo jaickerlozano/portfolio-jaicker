@@ -34,6 +34,20 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Theme initialization: prevent flash of wrong theme -->
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          // localStorage unavailable; theme will be applied by React
+        }
+      })();
+    </script>
   </head>
 
   <body>

@@ -22,6 +22,28 @@
     "developer": "Desarrollador Full Stack",
     "creator": "Creador de Experiencias"
   },
+  "story": {
+    "titleStart": "Ingeniería de ",
+    "titleHighlight": "Procesos",
+    "titleEnd": " a Código",
+    "paragraph1": "Comencé mi carrera como Ingeniero de Procesos Industriales, donde aprendí a optimizar sistemas complejos, analizar cuellos de botella y encontrar soluciones eficientes a problemas estructurales.",
+    "paragraph2": "Esa misma mentalidad analítica la llevé al desarrollo de software. Hoy soy Desarrollador Full Stack, construyendo aplicaciones end-to-end con Python/Django en el backend y React/TypeScript en el frontend.",
+    "paragraph3": "Integro AI Agents en mi flujo de trabajo para optimizar arquitectura y acelerar entregas, sin perder el foco en las bases: código limpio, testing, y buenas prácticas de diseño.",
+    "microCards": {
+      "backend": {
+        "title": "Backend",
+        "description": "Django, DRF, PostgreSQL, APIs RESTful."
+      },
+      "frontend": {
+        "title": "Frontend",
+        "description": "React, TypeScript, Tailwind CSS."
+      },
+      "ai": {
+        "title": "AI-Driven",
+        "description": "Agentes AI para arquitectura y eficiencia."
+      }
+    }
+  },
   "skills": {
     "title": "Stack",
     "titleHighlight": "Tecnológico",
@@ -66,5 +88,9 @@
   },
   "language": {
     "switch": "Cambiar a Inglés"
+  },
+  "theme": {
+    "switchToLight": "Cambiar a modo claro",
+    "switchToDark": "Cambiar a modo oscuro"
   }
 }

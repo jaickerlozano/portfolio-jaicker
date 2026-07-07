@@ -22,6 +22,28 @@
     "developer": "Full Stack Developer",
     "creator": "Experience Creator"
   },
+  "story": {
+    "titleStart": "From Process ",
+    "titleHighlight": "Engineering",
+    "titleEnd": " to Code",
+    "paragraph1": "I started my career as an Industrial Process Engineer, where I learned to optimize complex systems, analyze bottlenecks, and find efficient solutions to structural problems.",
+    "paragraph2": "I brought that same analytical mindset into software development. Today I'm a Full Stack Developer, building end-to-end applications with Python/Django on the backend and React/TypeScript on the frontend.",
+    "paragraph3": "I integrate AI Agents into my workflow to optimize architecture and accelerate deliveries, without losing focus on the fundamentals: clean code, testing, and good design practices.",
+    "microCards": {
+      "backend": {
+        "title": "Backend",
+        "description": "Django, DRF, PostgreSQL, RESTful APIs."
+      },
+      "frontend": {
+        "title": "Frontend",
+        "description": "React, TypeScript, Tailwind CSS."
+      },
+      "ai": {
+        "title": "AI-Driven",
+        "description": "AI agents for architecture and efficiency."
+      }
+    }
+  },
   "skills": {
     "title": "Tech",
     "titleHighlight": "Stack",
@@ -66,5 +88,9 @@
   },
   "language": {
     "switch": "Switch to Spanish"
+  },
+  "theme": {
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode"
   }
 }

@@ -13,18 +13,16 @@ const getSavedLanguage = () => {
 
 const savedLanguage = getSavedLanguage();
 
-i18n
-  .use(initReactI18next)
-  .init({
-    resources: {
-      es: { translation: es },
-      en: { translation: en },
-    },
-    lng: savedLanguage,
-    fallbackLng: 'es',
-    interpolation: {
-      escapeValue: false,
-    },
-  });
+i18n.use(initReactI18next).init({
+  resources: {
+    es: { translation: es },
+    en: { translation: en },
+  },
+  lng: savedLanguage,
+  fallbackLng: 'es',
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 export default i18n;

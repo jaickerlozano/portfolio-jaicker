@@ -106,9 +106,34 @@ Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 | `npm run build` | Build the project for production |
 | `npm run test` | Run the Vitest test suite |
 | `npm run test:coverage` | Run tests with coverage report |
-| `npm run lint` | Run the linter (currently a placeholder) |
+| `npm run lint` | Run ESLint and report errors |
+| `npm run lint:fix` | Fix ESLint issues automatically |
+| `npm run format` | Format code with Prettier |
+| `npm run format:check` | Check code formatting with Prettier |
 
 ---
+
+## 🧪 Testing
+
+The project uses **Vitest** + **Testing Library** + **jsdom** for unit and integration tests of React components.
+
+```bash
+npm run test          # Run tests
+npm run test:coverage # Run tests with coverage report
+```
+
+Current test suite covers the main components: `Hero`, `Navbar`, `Contact`, and `BentoProjects`.
+
+## Calidad de Código
+
+El proyecto usa ESLint y Prettier para mantener consistencia:
+
+```bash
+npm run lint          # Verificar errores
+npm run lint:fix      # Corregir automáticamente
+npm run format        # Formatear código
+npm run format:check  # Verificar formato
+```
 
 ## 🚀 Deploy
 

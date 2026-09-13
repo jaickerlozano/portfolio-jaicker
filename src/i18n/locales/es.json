@@ -1,19 +1,65 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Sobre mí",
+    "services": "Servicios",
     "projects": "Proyectos",
-    "skills": "Habilidades",
+    "about": "Sobre mí",
     "contact": "Contacto"
   },
   "hero": {
-    "available": "Disponible para nuevas oportunidades",
-    "title": "Construyendo",
-    "titleHighlight": "experiencias web",
-    "titleEnd": "de alto impacto.",
-    "description": "Soy Jaicker Lozano, Desarrollador Full Stack. Apasionado por crear interfaces modernas, eficientes y escalables.",
-    "viewProjects": "Ver Proyectos",
-    "contactMe": "Contáctame"
+    "available": "Disponible para proyectos y consultoría",
+    "title": "Desarrollo de software y",
+    "titleHighlight": "plataformas web",
+    "titleEnd": "para potenciar tu negocio.",
+    "description": "Transformo procesos complejos y requerimientos de negocio en aplicaciones web robustas, rápidas y escalables con Python/Django y React/TypeScript.",
+    "ctaQuote": "Cotizar un proyecto",
+    "viewProjects": "Ver soluciones",
+    "contactMe": "Hablemos de tu proyecto",
+    "previewBadge": "Arquitectura de Software",
+    "previewUptime": "99.9% Disponibilidad",
+    "previewConcurrency": "Concurrencia Segura",
+    "previewSpeed": "< 120ms Latencia",
+    "previewStack": "Django + React + PostgreSQL"
+  },
+  "services": {
+    "title": "Servicios",
+    "titleHighlight": "Especializados",
+    "description": "Soluciones de software diseñadas para automatizar operaciones, optimizar flujos de trabajo y escalar productos digitales.",
+    "cards": {
+      "customSoftware": {
+        "badge": "Backend & Automatización",
+        "title": "Sistemas de Gestión y Software a Medida",
+        "description": "Desarrollo de paneles administrativos, control de inventario y plataformas de reservas que reemplazan hojas de cálculo y procesos manuales propensos a error.",
+        "points": [
+          "Autenticación robusta y control de accesos basado en roles (RBAC)",
+          "Protección de concurrencia y consistencia transaccional",
+          "Métricas operativas y alertas automáticas en tiempo real"
+        ],
+        "stack": ["Python", "Django", "DRF", "PostgreSQL"]
+      },
+      "webPlatforms": {
+        "badge": "Frontend & UX",
+        "title": "Aplicaciones Web y Plataformas Digitales",
+        "description": "Construcción de interfaces modernas, reactivas y de alta velocidad centradas en la experiencia de usuario (UX) y optimizadas para conversión en cualquier dispositivo.",
+        "points": [
+          "Arquitectura modular de componentes y tipado estricto",
+          "Diseño Mobile-First y navegación fluida sin fricción",
+          "Optimización de rendimiento y Core Web Vitals"
+        ],
+        "stack": ["React 19", "TypeScript", "Tailwind CSS", "Vite"]
+      },
+      "apiIntegrations": {
+        "badge": "Infraestructura & Datos",
+        "title": "Arquitectura Backend, APIs e Integraciones",
+        "description": "Diseño e implementación de APIs RESTful seguras, modelado de bases de datos relacionales y conexión con servicios en la nube para sincronizar tus sistemas.",
+        "points": [
+          "Documentación estandarizada interactiva (Swagger / OpenAPI)",
+          "Integración de almacenamiento en la nube y servicios externos",
+          "Modelado de datos normalizado y despliegue productivo"
+        ],
+        "stack": ["REST APIs", "PostgreSQL", "Cloudinary", "Render"]
+      }
+    }
   },
   "about": {
     "title": "Sobre Mí",
@@ -57,11 +103,41 @@
     }
   },
   "projects": {
-    "title": "Proyectos",
-    "titleHighlight": "Destacados",
-    "description": "Una selección de proyectos que demuestran mis habilidades y pasión por el desarrollo web.",
-    "viewProject": "Ver Proyecto",
-    "featured": "Destacado"
+    "title": "Soluciones y",
+    "titleHighlight": "Proyectos Reales",
+    "description": "Sistemas completos desarrollados con foco en arquitectura sólida, integridad de datos, concurrencia y valor de negocio.",
+    "viewProject": "Ver Solución",
+    "featured": "Destacado",
+    "underConstruction": "En Construcción",
+    "production": "En Producción",
+    "liveDemo": "Demo en Vivo",
+    "viewCode": "Código",
+    "items": {
+      "inventory": {
+        "title": "Inventory System | Full-Stack Management",
+        "badge": "En Producción",
+        "description": "Sistema de gestión de inventario empresarial con Django REST Framework y React 19 / TypeScript. Incorpora control de concurrencia mediante bloqueo de filas (select_for_update), alertas multinivel de stock y documentación Swagger.",
+        "impact": "Concurrencia ACID & Métricas en Vivo"
+      },
+      "booking": {
+        "title": "Booking Manager | Residential Space Reservation",
+        "badge": "En Producción",
+        "description": "Plataforma de reservas de áreas comunes para complejos residenciales. Control de accesos RBAC (Admin/Residente), búsqueda en tiempo real, notificaciones automáticas y base de datos relacional PostgreSQL.",
+        "impact": "RBAC & Búsqueda en Tiempo Real"
+      },
+      "ecommerce": {
+        "title": "Código Secreto | E-Commerce Platform",
+        "badge": "En Construcción",
+        "description": "Arquitectura monorepo para tienda digital. Catálogo con filtros avanzados, carrito persistente, simulación de checkout/envíos y generación de tipos TypeScript sincronizados vía OpenAPI.",
+        "impact": "Monorepo & OpenAPI Type-Gen"
+      },
+      "vending": {
+        "title": "Vending Services | Telemetría & Gestión de Flotas",
+        "badge": "MVP Funcional",
+        "description": "Panel de administración y control operativo de máquinas vending. Monitoreo del estado de flota, telemetría de stock en tiempo real, alertas de reposición y métricas operativas.",
+        "impact": "Telemetría & Tele-Gestión"
+      }
+    }
   },
   "contact": {
     "title": "¿Listo para",

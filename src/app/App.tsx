@@ -1,10 +1,9 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Story } from './components/Story';
-import { TechTerminal } from './components/TechTerminal';
+import { Services } from './components/Services';
 import { BentoProjects } from './components/BentoProjects';
+import { Story } from './components/Story';
 import { Contact } from './components/Contact';
 
 export default function App() {
@@ -19,9 +18,9 @@ export default function App() {
 
       <main className="relative z-10">
         <Hero />
-        <Story />
-        <TechTerminal />
+        <Services />
         <BentoProjects />
+        <Story />
         <Contact />
       </main>
 

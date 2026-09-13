@@ -1,19 +1,65 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About Me",
+    "services": "Services",
     "projects": "Projects",
-    "skills": "Skills",
+    "about": "About Me",
     "contact": "Contact"
   },
   "hero": {
-    "available": "Available for new opportunities",
-    "title": "Building",
-    "titleHighlight": "high-impact web",
-    "titleEnd": "experiences.",
-    "description": "I'm Jaicker Lozano, a Full Stack Developer. Passionate about creating modern, efficient, and scalable interfaces.",
-    "viewProjects": "View Projects",
-    "contactMe": "Contact Me"
+    "available": "Available for projects & consulting",
+    "title": "Software development &",
+    "titleHighlight": "web platforms",
+    "titleEnd": "to scale your business.",
+    "description": "Transforming complex workflows and business requirements into robust, fast, and scalable web applications using Python/Django and React/TypeScript.",
+    "ctaQuote": "Request a Quote",
+    "viewProjects": "View Solutions",
+    "contactMe": "Let's Talk About Your Project",
+    "previewBadge": "Software Architecture",
+    "previewUptime": "99.9% Uptime",
+    "previewConcurrency": "Concurrency Protected",
+    "previewSpeed": "< 120ms Latency",
+    "previewStack": "Django + React + PostgreSQL"
+  },
+  "services": {
+    "title": "Specialized",
+    "titleHighlight": "Services",
+    "description": "Software solutions engineered to automate operations, streamline workflows, and scale digital products.",
+    "cards": {
+      "customSoftware": {
+        "badge": "Backend & Automation",
+        "title": "Management Systems & Custom Software",
+        "description": "Building custom admin dashboards, inventory control systems, and reservation platforms that eliminate spreadsheets and error-prone manual operations.",
+        "points": [
+          "Robust authentication & role-based access control (RBAC)",
+          "Concurrency protection and transactional data consistency",
+          "Operational metrics and real-time automated alerts"
+        ],
+        "stack": ["Python", "Django", "DRF", "PostgreSQL"]
+      },
+      "webPlatforms": {
+        "badge": "Frontend & UX",
+        "title": "Web Applications & Digital Platforms",
+        "description": "Crafting responsive, high-speed, and interactive user interfaces focused on smooth user experience (UX) and optimized for conversion across all devices.",
+        "points": [
+          "Modular component architecture with strict typing",
+          "Mobile-First responsive design and frictionless navigation",
+          "Performance optimization & superior Core Web Vitals"
+        ],
+        "stack": ["React 19", "TypeScript", "Tailwind CSS", "Vite"]
+      },
+      "apiIntegrations": {
+        "badge": "Infrastructure & Data",
+        "title": "Backend Architecture, APIs & Integrations",
+        "description": "Designing secure RESTful APIs, relational database schemas, and third-party cloud service integrations to keep your business systems in sync.",
+        "points": [
+          "Standardized interactive documentation (Swagger / OpenAPI)",
+          "Cloud storage integration & third-party API webhooks",
+          "Normalized schema modeling and production-ready deployments"
+        ],
+        "stack": ["REST APIs", "PostgreSQL", "Cloudinary", "Render"]
+      }
+    }
   },
   "about": {
     "title": "About Me",
@@ -58,10 +104,40 @@
   },
   "projects": {
     "title": "Featured",
-    "titleHighlight": "Projects",
-    "description": "A selection of projects that demonstrate my skills and passion for web development.",
-    "viewProject": "View Project",
-    "featured": "Featured"
+    "titleHighlight": "Solutions & Projects",
+    "description": "Production-ready systems engineered with a focus on robust architecture, data integrity, concurrency, and real business value.",
+    "viewProject": "View Solution",
+    "featured": "Featured",
+    "underConstruction": "In Development",
+    "production": "Production Ready",
+    "liveDemo": "Live Demo",
+    "viewCode": "Source Code",
+    "items": {
+      "inventory": {
+        "title": "Inventory System | Full-Stack Management",
+        "badge": "Production Ready",
+        "description": "Full-stack enterprise inventory system with Django REST Framework and React 19 / TypeScript. Features row-level locking (select_for_update) for concurrency protection, multi-level stock alerts, and Swagger documentation.",
+        "impact": "ACID Concurrency & Live Metrics"
+      },
+      "booking": {
+        "title": "Booking Manager | Residential Space Reservation",
+        "badge": "Production Ready",
+        "description": "Residential amenities reservation platform with role-based access control (Admin/Resident), real-time search, automated notifications, Cloudinary asset storage, and PostgreSQL on Render.",
+        "impact": "RBAC & Real-Time Search"
+      },
+      "ecommerce": {
+        "title": "Código Secreto | E-Commerce Platform",
+        "badge": "In Development",
+        "description": "Monorepo e-commerce architecture for digital retail. Advanced product catalog, persistent shopping cart, checkout and shipping simulation, and automatic client type generation via OpenAPI schemas.",
+        "impact": "Monorepo & OpenAPI Type-Gen"
+      },
+      "vending": {
+        "title": "Vending Services | Fleet Management & Telemetry",
+        "badge": "Functional MVP",
+        "description": "Operational administrative dashboard for vending machine fleets. Real-time telemetry monitoring, replenishment alerts, machine status tracking, and operational metrics.",
+        "impact": "Telemetry & Fleet Management"
+      }
+    }
   },
   "contact": {
     "title": "Ready to",

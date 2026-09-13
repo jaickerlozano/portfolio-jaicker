@@ -1,183 +1,155 @@
 ![Banner Jaicker Lozano](./src/assets/img/banner-portfolio-personal.webp)
 
-# 💻 Personal Portfolio
+# 💻 Jaicker Lozano — Full Stack Developer & Software Services
 
 [![Deploy](https://github.com/jaickerlozano/portfolio-jaicker/actions/workflows/deploy.yml/badge.svg)](https://github.com/jaickerlozano/portfolio-jaicker/actions/workflows/deploy.yml)
 [![Built with React](https://img.shields.io/badge/Built%20with-React-61DAFB?logo=react)](https://react.dev/)
+[![Package Manager: pnpm](https://img.shields.io/badge/Maintained%20with-pnpm-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-A modern, responsive, and interactive personal portfolio designed to showcase my projects, skills, and professional journey as a **Full Stack Developer**.
+A modern, high-performance portfolio and software services showcase designed to present custom software development, web platforms, and backend engineering capabilities.
 
-Built with **React 18 + TypeScript**, styled with **Tailwind CSS v4**, animated with **Motion**, and prepared for international audiences with **react-i18next**.
+Built with **React + TypeScript**, styled with **Tailwind CSS v4**, animated with **Motion**, strictly managed via **pnpm**, and featuring comprehensive internationalization with **react-i18next**.
 
 ---
 
 ## 🚀 Overview
 
-This project is my digital presentation card — a space where I share who I am, the technologies I work with, and the projects I’ve developed during my journey as a **Full Stack Developer**.
+This portfolio serves as both my digital presentation and client acquisition platform. Combining an **Industrial Process Engineering** background with **Full Stack Software Engineering**, I build resilient, end-to-end applications designed to automate complex operations and deliver measurable business value.
 
-The goal of this portfolio is not only to display my work but also to demonstrate my understanding of **responsive design**, **component architecture**, **performance optimization**, and **modern frontend development**.
-
----
-
-## 🛠️ Technologies Used
-
-- **React 18** – UI library for building component-based interfaces.
-- **TypeScript** – Static typing for safer and more maintainable code.
-- **Vite** – Fast development server and optimized production builds.
-- **Tailwind CSS v4** – Utility-first CSS framework for rapid styling.
-- **Motion** – Smooth animations and micro-interactions.
-- **react-i18next** – Internationalization (Spanish / English).
-- **Formspree** – Contact form handling without a custom backend.
-- **GitHub Actions** – Continuous deployment to GitHub Pages.
-- **Git & GitHub Pages** – Version control and hosting.
+> 👉 **Live Demo:** [https://jaickerlozano.github.io/portfolio-jaicker/](https://jaickerlozano.github.io/portfolio-jaicker/)
 
 ---
 
-## 🌟 Features
+## 💼 Specialized Services
 
-- 🌍 **Internationalization (i18n)** — Switch between Spanish and English.
-- 🌙 **Dark theme** — Consistent dark-first UI.
-- ✨ **Smooth animations** — Motion-powered transitions and micro-interactions.
-- 📱 **Fully responsive** — Mobile, tablet, and desktop layouts.
-- ⚡ **Optimized assets** — Compressed images, MP4 videos for GIFs, and lazy loading.
-- ♿ **Accessibility improvements** — `aria-label`s, semantic HTML, and keyboard-friendly navigation.
-- 🧩 **Modular structure** — Easy to scale and maintain.
-- 📂 **Organized project files** — Clear separation of components, assets, and configuration.
-- 🚀 **Live version** deployed on **GitHub Pages**.
+The platform highlights three core service pillars tailored to businesses, startups, and operational workflows:
+
+1. **Custom Software & Management Systems**
+   - End-to-end admin dashboards, inventory control, and space reservation systems.
+   - Concurrency protection (`select_for_update`), transactional integrity, and Role-Based Access Control (RBAC).
+   - *Core Stack:* Python, Django, Django REST Framework, PostgreSQL.
+
+2. **Web Applications & Digital Platforms**
+   - High-speed, responsive Single Page Applications (SPAs) and e-commerce interfaces.
+   - Mobile-First design, modular component architecture, and Core Web Vitals optimization.
+   - *Core Stack:* React 19, TypeScript, Tailwind CSS, Vite.
+
+3. **Backend Architecture, APIs & Cloud Integrations**
+   - Secure RESTful APIs, OpenAPI/Swagger documentation, and third-party webhook integrations.
+   - Relational database schema modeling and automated cloud deployment.
+   - *Core Stack:* Django REST Framework, PostgreSQL, Cloudinary, Docker, Render.
 
 ---
 
-## 📸 Preview
+## 🏆 Featured Commercial Projects
 
-> _You can check the live version here:_  
-> 👉 [Live Demo](https://jaickerlozano.github.io/portfolio-jaicker/)
+The portfolio showcases 4 production-grade systems:
+
+| Project | Description | Stack | Highlights |
+|---------|-------------|-------|------------|
+| **[Inventory System](https://github.com/jaickerlozano/inventory_sistem_full_stack)** | Enterprise inventory & stock management | Django REST, React 19, TypeScript, PostgreSQL, Tailwind v4 | Row-level locking concurrency (`select_for_update`), real-time stock alerts, Swagger docs, live demo on Render |
+| **[Booking Manager](https://github.com/jaickerlozano/booking_manager_django)** | Residential amenities reservation system | Django 5.2, Python, PostgreSQL, Cloudinary, RBAC | Granular role-based permissions (Admin/Resident), real-time AJAX search, live demo on Render |
+| **[Código Secreto](https://github.com/jaickerlozano/codigo_secreto)** | E-Commerce monorepo platform *(In Development)* | Django REST, React 19, TypeScript, OpenAPI, Tailwind CSS | Monorepo architecture, product catalog, cart/checkout pipeline, automatic OpenAPI type generation |
+| **[Vending Services](https://github.com/jaickerlozano/vending-services-web-app)** | Fleet management & telemetry dashboard | React, TypeScript, Python/Django, Tailwind CSS | Fleet telemetry monitoring, stock replenishment alerts, and revenue metrics |
+
+---
+
+## 🛠️ Technology Stack
+
+- **Runtime & Package Manager:** Node.js 20+ & **pnpm v10**
+- **Frontend:** React 18/19, TypeScript 5.7, Tailwind CSS v4, Motion
+- **Tooling & Bundler:** Vite 6, Autoprefixer, PostCSS
+- **Internationalization:** `i18next` & `react-i18next` (English / Spanish)
+- **Testing & Quality:** Vitest, Testing Library, ESLint, Prettier
+- **CI/CD & Hosting:** GitHub Actions workflow with `pnpm/action-setup`, deploying to GitHub Pages
 
 ---
 
 ## 📁 Project Structure
 
 ```
-portfolio-personal/
+portfolio-jaicker/
 ├── .github/
-│   └── workflows/        # GitHub Actions deployment pipeline
-├── public/               # Static public assets
+│   └── workflows/
+│       └── deploy.yml          # Automated CI/CD deployment with pnpm
+├── public/                     # Static assets (favicon, robots.txt, sitemap.xml)
 ├── src/
 │   ├── app/
-│   │   ├── components/   # React components (Navbar, Hero, Projects, etc.)
-│   │   └── App.tsx       # Root application component
+│   │   ├── components/
+│   │   │   ├── BentoProjects.tsx  # Responsive 4-item bento grid showcase
+│   │   │   ├── Contact.tsx        # Client inquiry & contact form
+│   │   │   ├── Hero.tsx           # Two-column hero with live metrics preview
+│   │   │   ├── Navbar.tsx         # Sticky navigation with theme & language toggle
+│   │   │   ├── Services.tsx       # 3 commercial service cards & engineering banner
+│   │   │   ├── Story.tsx          # Engineering-to-code background & philosophy
+│   │   │   └── TechTerminal.tsx   # Interactive terminal component
+│   │   └── App.tsx                # Main app layout and section ordering
 │   ├── assets/
-│   │   └── img/          # Images, icons, and optimized media
-│   ├── i18n/             # Translation files (es, en)
-│   └── main.tsx          # Application entry point
-├── index.html
+│   │   └── img/                   # Optimized images and project mockups
+│   ├── i18n/
+│   │   └── locales/
+│   │       ├── en.json            # English translations
+│   │       └── es.json            # Spanish translations
+│   ├── styles/                    # Tailwind v4, typography & CSS variables
+│   └── main.tsx                   # React root entry point
 ├── package.json
+├── pnpm-lock.yaml
 ├── tsconfig.json
-├── vite.config.ts
-├── tailwind.config.js
-└── README.md
+└── vite.config.ts
 ```
 
 ---
 
 ## 🧪 Running Locally
 
-Make sure you have **Node.js 18+** installed.
+Ensure you have **Node.js 20+** and **pnpm** installed.
 
 ```bash
 # Clone the repository
 git clone https://github.com/jaickerlozano/portfolio-jaicker.git
 cd portfolio-jaicker
 
-# Install dependencies
-npm install
+# Install dependencies with pnpm
+pnpm install
 
-# Start the development server
-npm run dev
+# Start the Vite development server
+pnpm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+Open [http://localhost:5173/portfolio-jaicker/](http://localhost:5173/portfolio-jaicker/) to view the application.
 
-### Available scripts
+### Available Scripts
 
 | Script | Description |
 |--------|-------------|
-| `npm run dev` | Start the Vite development server |
-| `npm run build` | Build the project for production |
-| `npm run test` | Run the Vitest test suite |
-| `npm run test:coverage` | Run tests with coverage report |
-| `npm run lint` | Run ESLint and report errors |
-| `npm run lint:fix` | Fix ESLint issues automatically |
-| `npm run format` | Format code with Prettier |
-| `npm run format:check` | Check code formatting with Prettier |
+| `pnpm run dev` | Starts the Vite development server |
+| `pnpm run build` | Compiles and optimizes production bundle into `dist/` |
+| `pnpm run test` | Runs the Vitest test suite |
+| `pnpm run test:coverage` | Runs tests and generates code coverage report |
+| `pnpm run lint` | Checks codebase with ESLint |
+| `pnpm run lint:fix` | Automatically fixes autofixable ESLint errors |
+| `pnpm run format` | Formats source files with Prettier |
+| `pnpm run format:check` | Checks source code formatting consistency |
 
 ---
 
-## 🧪 Testing
+## 🚀 Continuous Deployment
 
-The project uses **Vitest** + **Testing Library** + **jsdom** for unit and integration tests of React components.
-
-```bash
-npm run test          # Run tests
-npm run test:coverage # Run tests with coverage report
-```
-
-Current test suite covers the main components: `Hero`, `Navbar`, `Contact`, and `BentoProjects`.
-
-## Calidad de Código
-
-El proyecto usa ESLint y Prettier para mantener consistencia:
-
-```bash
-npm run lint          # Verificar errores
-npm run lint:fix      # Corregir automáticamente
-npm run format        # Formatear código
-npm run format:check  # Verificar formato
-```
-
-## 🚀 Deploy
-
-The project is automatically deployed to **GitHub Pages** using **GitHub Actions** every time changes are pushed to the `main` branch.
-
-The workflow is defined in `.github/workflows/deploy.yml`.
+Every push to the `main` branch automatically triggers the GitHub Actions workflow in [deploy.yml](.github/workflows/deploy.yml), installing dependencies via `pnpm install --frozen-lockfile`, building the production bundle, and deploying directly to **GitHub Pages**.
 
 ---
 
-## 🧠 Lessons Learned
+## 🤝 Contact & Inquiries
 
-While building this project, I strengthened my understanding of:
-
-- Component-based architecture with React and TypeScript.
-- Responsive web design principles using Tailwind CSS.
-- Animation patterns with Motion (Framer Motion).
-- Internationalization workflows with react-i18next.
-- Performance optimization: image compression, lazy loading, and modern media formats.
-- Project organization and workflow optimization using Vite.
-- UI/UX thinking for better user experience and accessibility.
-
----
-
-## 💬 About Me
-
-I’m **Jaicker Lozano**, an Industrial Process Engineer and passionate **Full Stack Developer** currently completing a **Full Stack Development Master** at **Conquer Blocks**.  
-I enjoy creating clean, interactive, and scalable web interfaces — always seeking to improve my skills and explore new technologies.
-
----
-
-## 🤝 Connect with Me
-
-- 💼 [LinkedIn](https://www.linkedin.com/in/jaicker-rafael-lozano-flores-970197264)
-- 🐙 [GitHub](https://github.com/jaickerlozano)
-- ✉️ Email: jlozano.devcode@gmail.com
-
----
-
-## 🏁 Project Status
-
-✅ **Completed** — continuously improving and adding new sections as my professional journey evolves.
+- 💼 **LinkedIn:** [Jaicker Rafael Lozano Flores](https://www.linkedin.com/in/jaicker-rafael-lozano-flores-970197264/)
+- 🐙 **GitHub:** [@jaickerlozano](https://github.com/jaickerlozano)
+- ✉️ **Email:** [jlozano.devcode@gmail.com](mailto:jlozano.devcode@gmail.com)
+- 💬 **WhatsApp:** [+56 9 5851 4284](https://wa.me/56958514284)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is open-source and licensed under the [MIT License](./LICENSE).

@@ -18,7 +18,7 @@ Built with **React + TypeScript**, styled with **Tailwind CSS v4**, animated wit
 
 This portfolio serves as both my digital presentation and client acquisition platform. Combining an **Industrial Process Engineering** background with **Full Stack Software Engineering**, I build resilient, end-to-end applications designed to automate complex operations and deliver measurable business value.
 
-> 👉 **Live Demo:** [https://jaickerlozano.github.io/portfolio-jaicker/](https://jaickerlozano.github.io/portfolio-jaicker/)
+> 👉 **Live Demo:** [https://jaicker.dev/](https://jaicker.dev/)
 
 ---
 
@@ -118,7 +118,7 @@ pnpm install
 pnpm run dev
 ```
 
-Open [http://localhost:5173/portfolio-jaicker/](http://localhost:5173/portfolio-jaicker/) to view the application.
+Open [http://localhost:5173/](http://localhost:5173/) to view the application.
 
 ### Available Scripts
 
